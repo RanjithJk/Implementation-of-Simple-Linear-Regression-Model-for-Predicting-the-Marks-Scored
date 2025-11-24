@@ -81,9 +81,11 @@ print("Root Mean Square Error = ",rmse)
 ## Output:
 <img width="1455" height="971" alt="483861320-46a5c775-e289-47c4-977d-9d77bdd4febd" src="https://github.com/user-attachments/assets/0f6ef12a-6cab-4727-a3a9-daccfb569d48" />
 
-![simple linear regression model for predicting the marks scored](sam.png) <img width="356" height="271" alt="494710142-4ba0a26e-f51b-4af8-be16-17a5e08ffd5f" src="https://github.com/user-attachments/assets/205bd577-5f67-4b13-bf6e-8f8c10b01fbb" />
+<img width="785" height="573" alt="417874517-5c9a63c0-1115-4a56-9598-d4c616ad40a7" src="https://github.com/user-attachments/assets/2fac11d4-ca2c-479c-a8d5-933d348057a1" />
 
-<img width="1455" height="971" alt="483861320-46a5c775-e289-47c4-977d-9d77bdd4febd" src="https://github.com/user-attachments/assets/0f6ef12a-6cab-4727-a3a9-daccfb569d48" />
+<img width="791" height="578" alt="417874561-decc794b-aa1f-48a4-9370-593ccf6721d8" src="https://github.com/user-attachments/assets/af64a611-48a1-49a9-ae2d-a2461b0b2990" />
+
+
 <img width="226" height="35" alt="494710178-cb9dffe7-c7fc-40ed-a397-288fdcc6789e" src="https://github.com/user-attachments/assets/8b495806-338f-40ab-920c-20d8d3f7b321" />
 
 
