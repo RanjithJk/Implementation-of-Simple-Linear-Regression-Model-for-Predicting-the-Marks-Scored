@@ -17,13 +17,63 @@ To write a program to predict the marks scored by a student using the simple lin
 ```
 /*
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: 
-RegisterNumber:  
+Developed by: RANJITH JK
+RegisterNumber: 212224230221 
 */
+```
+```
+import pandas as pd
+import numpy as np
+from sklearn.metrics import mean_absolute_error,mean_squared_error
+import matplotlib.pyplot as plt
+
+dataset=pd.read_csv('student_scores.csv')
+print(dataset.head())
+dataset=pd.read_csv('student_scores.csv')
+print(dataset.tail())
+x=dataset.iloc[:,:-1].values
+print(x)
+y=dataset.iloc[:,1].values
+print(y)
+
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=1/3,random_state=0)
+from sklearn.linear_model import LinearRegression
+reg=LinearRegression()
+reg.fit(x_train,y_train)
+y_pred = reg.predict(x_test)
+print(y_pred)
+print(y_test)
+
+plt.scatter(x_train,y_train,color='purple')
+plt.plot(x_train,reg.predict(x_train),color='black')
+plt.title("Hours vs Scores(Training set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
+plt.show()
+
+plt.scatter(x_test,y_test,color='red')
+plt.plot(x_train,reg.predict(x_train),color='black')
+plt.title("Hours vs Scores(Training set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
+plt.show()
+
+mse=mean_absolute_error(y_test,y_pred)
+print('Mean Square Error = ',mse)
+mae=mean_absolute_error(y_test,y_pred)
+print('Mean Absolute Error = ',mae)
+rmse=np.sqrt(mse)
+print("Root Mean Square Error = ",rmse)
 ```
 
 ## Output:
-![simple linear regression model for predicting the marks scored](sam.png)
+<img width="1455" height="971" alt="483861320-46a5c775-e289-47c4-977d-9d77bdd4febd" src="https://github.com/user-attachments/assets/0f6ef12a-6cab-4727-a3a9-daccfb569d48" />
+
+![simple linear regression model for predicting the marks scored](sam.png) <img width="356" height="271" alt="494710142-4ba0a26e-f51b-4af8-be16-17a5e08ffd5f" src="https://github.com/user-attachments/assets/205bd577-5f67-4b13-bf6e-8f8c10b01fbb" />
+
+<img width="1455" height="971" alt="483861320-46a5c775-e289-47c4-977d-9d77bdd4febd" src="https://github.com/user-attachments/assets/0f6ef12a-6cab-4727-a3a9-daccfb569d48" />
+<img width="226" height="35" alt="494710178-cb9dffe7-c7fc-40ed-a397-288fdcc6789e" src="https://github.com/user-attachments/assets/8b495806-338f-40ab-920c-20d8d3f7b321" />
 
 
 ## Result:
